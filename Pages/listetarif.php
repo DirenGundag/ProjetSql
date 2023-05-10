@@ -4,7 +4,6 @@ require_once "../Class/ClassTarif.php";
 require_once "../CSS/listetarifcss.php";
 
 
-
   $tarif = new Tarif($db);
 
   // Selectionne le tarif dans la base de données

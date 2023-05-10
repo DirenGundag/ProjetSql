@@ -1,19 +1,11 @@
 <?php
 require_once "../Pages/dbconnexion.php";
-// require_once "../Pages/tarif.php";
 
 class Tarif {
     private int $id;
 	private string $titre;
 	private string $description;
 	private string $prix;
-
-	// public function __construct(int $id, string $titre, string $email, string $password){
-	// 	$this->id=$id;
-	// 	$this->titre=$titre;
-	// 	$this->email=$email;
-    //     $this->password=$password;
-	// }
 
     private $db;
     private $matable;
@@ -92,70 +84,6 @@ class Tarif {
         }
     }
 
-    // public function select(){
-    //     $sql="SELECT * FROM tarif";
-    //     try {
-    //         $sqlstatement = $this->db->prepare($sql);
-    //         $sqlstatement->execute();
-        
-    //     } catch (PDOException $e) {
-    //         file_put_contents('dblogs.log', $e->getMessage().PHP_EOL, FILE_APPEND);
-    //         echo 'Une erreur est survenue lors de la sélection';
-    //     }
-    // }
-
-
-    // public function select()
-    // {
-    //             $sqlQuery = "SELECT * FROM  tarif";
-    //             try {
-    //                 $sqlStatement = $this->db->prepare($sqlQuery);
-
-    //                 $sqlStatement->execute();
-
-    //                 $result = $sqlStatement->fetch();
-
-    //                 if ($result) {
-    //                     $this->id = $result["id"];
-    //                     $this->titre = $result["titre"];
-    //                     $this->description = $result["description"];
-    //                     $this->prix = $result["prix"];
-    //                 }else {
-    //                     $this->id = 0;}
-    //             } catch (PDOException $e) {
-    //                 file_put_contents('dblogs.log', $e->getMessage().PHP_EOL, FILE_APPEND);
-    //                 echo 'Une erreur est survenue lors de la selection ';
-
-    //             }
-
-    // }
-
-    // public function selectall()
-    // {
-    //     $sqlQuery = "SELECT * FROM  tarif ";
-    //     try {
-    //         $sqlStatement = $this->db->prepare($sqlQuery);
-    //         $sqlStatement->execute();
-    //         $results = $sqlStatement->fetchAll(PDO::FETCH_ASSOC);
-    //         $tarifs = array();
-    //         foreach ($results as $result) {
-    //             $tarif = new Tarif($this->db);
-    //             $tarif->setId($result["id"]);
-    //             $tarif->setTitre($result["titre"]);
-    //             $tarif->setDescription($result["description"]);
-    //             $tarif->setPrix($result["prix"]);
-    //             $tarifs[] = $tarif;
-    //         }
-    //         return $tarifs;
-    //     } catch (PDOException $e) {
-    //         file_put_contents('dblogs.log', $e->getMessage() . PHP_EOL, FILE_APPEND);
-    //         echo 'Une erreur est survenue lors de la selection ';
-    //     }
-    // }
-
-
-
-//   
 
 
 public function selectall()
